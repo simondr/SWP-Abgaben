@@ -3,53 +3,51 @@ import java.util.Random;
 
 public class Main {
 
-    static ArrayList<Integer> arrayList = new ArrayList<>();
-    static ArrayList<Integer> arrayListSortiert = new ArrayList<>();
 
     public static void main(String[] args) {
 
-        arrayFuellen(10);
-        for (int i = 0; i <= arrayList.size()-1; i++) {
-            System.out.println(arrayList.get(i));
-            arraySortieren();
-        }
-        System.out.println();
-        arraySortieren();
-        for (int i = 0; i <= arrayListSortiert.size()-1; i++) {
-            System.out.println(arrayListSortiert.get(i));
-            arraySortieren();
-        }
-
-
-    }
-
-    public static void arraySortieren() {
-
-        while(arrayList.size() > 0) {
-            int minimum = arrayList.get(0);
-            int minimumindex = 0;
-
-            for (int j = 1; j <= arrayList.size()-1; j++) {
-
-                if (arrayList.get(j) < minimum) {
-                    minimum = arrayList.get(j);
-                    minimumindex = arrayList.indexOf(j);
-                }
-            }
-
-            arrayListSortiert.add(minimum);
-            arrayList.remove(minimumindex);
-        }
-    }
-
-    public static void arrayFuellen(int laenge) {
-
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        ArrayList<Integer> arrayListSorted = new ArrayList<>();
         Random r = new Random();
-        for (int i = 0; i <= laenge; i++) {
 
-            arrayList.add(r.nextInt(100));
+        for(int i = 0; i<= 9; i++){
+             arrayList.add(r.nextInt(100));
+             System.out.println(arrayList.get(i));
+        }
+
+        System.out.println();
+        
+
+       for (int j = 0; j < arrayList.size(); j++ ){
+
+            int minimum = arrayList.get(0);
+            int minimumindex = arrayList.indexOf(0);
+            
+
+            for (int i = 1; i < arrayList.size(); i++){
+
+               
+                if(arrayList.get(i) < minimum) {
+                     minimum = arrayList.get(i);
+                     minimumindex = i;
+
+                }
+
+            }
+           arrayListSorted.add(minimum);
+           arrayList.remove(minimumindex);
+            
+            System.out.println(minimum);
+            System.out.println(minimumindex);
+            
+        }
+
+
+        for(int i = 0; i<= 9; i++){
+            System.out.println(arrayListSorted.get(i));
         }
     }
+
 
 
 }
