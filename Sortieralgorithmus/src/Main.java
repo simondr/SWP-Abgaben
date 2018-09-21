@@ -25,11 +25,11 @@ public class Main {
 
     public static void arraySortieren() {
 
-        for (int i = 0; i <= arrayList.size()-1; i++) {
+        while(arrayList.size() > 0) {
             int minimum = arrayList.get(0);
             int minimumindex = 0;
 
-            for (int j = 0; j <= arrayList.size()-1; j++) {
+            for (int j = 1; j <= arrayList.size()-1; j++) {
 
                 if (arrayList.get(j) < minimum) {
                     minimum = arrayList.get(j);
