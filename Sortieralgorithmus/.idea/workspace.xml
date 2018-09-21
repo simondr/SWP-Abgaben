@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6dbd31bd-f662-4673-8ad8-71f46063690e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sortieralgorithmus.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Sortieralgorithmus.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sortieralgorithmus/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sortieralgorithmus/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fizzbuzz/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../fizzbuzz/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fizzbuzz/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fizzbuzz/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fizzbuzz/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fizzbuzz/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fizzbuzz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fizzbuzz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fizzbuzz/4AHWII.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../fizzbuzz/4AHWII.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fizzbuzz/out/production/4AHWII/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../fizzbuzz/out/production/4AHWII/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../fizzbuzz/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../fizzbuzz/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="6dbd31bd-f662-4673-8ad8-71f46063690e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -200,15 +182,16 @@
       <workItem from="1537252995336" duration="1278000" />
       <workItem from="1537450788122" duration="512000" />
       <workItem from="1537453951909" duration="1340000" />
-      <workItem from="1537541756813" duration="678000" />
+      <workItem from="1537541756813" duration="867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3808000" />
+    <option name="totallyTimeSpent" value="3997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26037195" />
       <window_info id="Structure" order="1" weight="0.25" />
