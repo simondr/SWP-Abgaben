@@ -6,16 +6,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> arrayList = new ArrayList<>();
+        long stattime = System.nanoTime();
+        long elapsedtime = 0;
+        ArrayList<Integer> arrayList = getRandomList(10);
         ArrayList<Integer> arrayListSorted = new ArrayList<>();
-        Random r = new Random();
 
-        // Fills the list with random data
-        for (int i = 0; i <= 9; i++) {
-            arrayList.add(r.nextInt(100));
+        for (int i = 0; i <= arrayList.size()-1; i++) {
+
             System.out.println(arrayList.get(i));
         }
 
+        System.out.println();
 
         while (arrayList.size() > 0) {
 
@@ -23,7 +24,7 @@ public class Main {
             int minimumindex = 0;
 
 
-            for (int i = 1; i < arrayList.size(); i++) {
+            for (int i = 1; i < arrayList.size()-1; i++) {
                 if (arrayList.get(i) < minimum) {
                     minimum = arrayList.get(i);
                     minimumindex = i;
@@ -36,9 +37,23 @@ public class Main {
         }
 
 
-        for (int i = 0; i <= 9; i++) {
+        for (int i = 0; i <= arrayListSorted.size()-1; i++) {
             System.out.println(arrayListSorted.get(i));
         }
+
+        elapsedtime = System.nanoTime() - stattime;
+        System.out.println("elapsed time: " + elapsedtime + " ns");
+    }
+
+    //returns arraylist filled with random integers
+    public static ArrayList<Integer> getRandomList(int size){
+
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        Random r = new Random();
+        for (int i = 0; i <= size-1; i++) {
+            arrayList.add(r.nextInt(100));
+        }
+        return arrayList;
     }
 
 
