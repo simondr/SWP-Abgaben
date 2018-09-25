@@ -5,13 +5,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> arrayList = new ArrayList<Integer>();
-        Random r = new Random();
 
-        //fills array with random integers and prints array
+        long starttime = System.nanoTime();
+        long elapsedtime = 0;
+        ArrayList<Integer> arrayList = getRandomList(10);
+
         for (int i = 0; i <= 9; i++) {
-
-            arrayList.add(r.nextInt(100));
             System.out.println(arrayList.get(i));
         }
 
@@ -32,10 +31,23 @@ public class Main {
 
         //prints sorted array
         for (int i = 0; i <= 9; i++) {
-
-            arrayList.add(r.nextInt(100));
             System.out.println(arrayList.get(i));
         }
+
+        elapsedtime = System.nanoTime() - starttime;
+        System.out.println("elapsed time " + elapsedtime + " ns");
+
+    }
+
+    public static ArrayList<Integer> getRandomList(int size){
+
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        Random r = new Random();
+        for (int i = 0; i<= size-1; i++){
+
+            arrayList.add(r.nextInt(100));
+        }
+        return arrayList;
 
     }
 }
