@@ -33,9 +33,6 @@ public class Main {
             arrayListSorted.add(minimum);
             arrayList.remove(minimumindex);
 
-            /*System.out.println(minimum);
-            System.out.println(minimumindex);*/
-
         }
 
 
