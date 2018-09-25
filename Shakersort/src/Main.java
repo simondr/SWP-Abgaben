@@ -9,19 +9,41 @@ public class Main {
         Random r = new Random();
 
         //fills array with random integers and prints it
-        for(int i = 0; i <= 9; i++){
+        for (int i = 0; i <= 9; i++) {
             arrayList.add(r.nextInt(100));
             System.out.println(arrayList.get(i));
         }
 
-        for(int i = 0; i <= 9; i++){
+        System.out.println();
 
-            if (arrayList.get(i - 1) > arrayList.get(i)) {
-                int a = arrayList.get(i - 1);
-                arrayList.set(i - 1, arrayList.get(i));
-                arrayList.set(i, a);
+        int maxindex = 9;
+        int minindex = 0;
+
+        while (minindex < maxindex) {
+            for (int i = 0; i <= maxindex; i++) {
+
+                if (arrayList.get(i + 1) > arrayList.get(i)) {
+                    maxindex = i;
+                    int a = arrayList.get(i + 1);
+                    arrayList.set(i + 1, arrayList.get(i));
+                    arrayList.set(i, a);
+                }
+
             }
 
+           for (int i = 9; i >= minindex; i--) {
+
+                if (arrayList.get(i-1) < arrayList.get(i)) {
+                    minindex = i;
+                    int a = arrayList.get(i - 1);
+                    arrayList.set(i - 1, arrayList.get(i));
+                    arrayList.set(i, a);
+                }
+            }
+        }
+
+        for (int i = 0; i <= 9; i++) {
+            System.out.println(arrayList.get(i));
         }
     }
 }
