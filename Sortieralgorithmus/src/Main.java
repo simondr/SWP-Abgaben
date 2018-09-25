@@ -10,44 +10,39 @@ public class Main {
         ArrayList<Integer> arrayListSorted = new ArrayList<>();
         Random r = new Random();
 
-        for(int i = 0; i<= 9; i++){
-             arrayList.add(r.nextInt(100));
-             System.out.println(arrayList.get(i));
+        // Fills the list with random data
+        for (int i = 0; i <= 9; i++) {
+            arrayList.add(r.nextInt(100));
+            System.out.println(arrayList.get(i));
         }
 
-        System.out.println();
-        
 
-       for (int j = 0; j < arrayList.size(); j++ ){
+        while (arrayList.size() > 0) {
 
             int minimum = arrayList.get(0);
-            int minimumindex = arrayList.indexOf(0);
-            
+            int minimumindex = 0;
 
-            for (int i = 1; i < arrayList.size(); i++){
 
-               
-                if(arrayList.get(i) < minimum) {
-                     minimum = arrayList.get(i);
-                     minimumindex = i;
-
+            for (int i = 1; i < arrayList.size(); i++) {
+                if (arrayList.get(i) < minimum) {
+                    minimum = arrayList.get(i);
+                    minimumindex = i;
                 }
 
             }
-           arrayListSorted.add(minimum);
-           arrayList.remove(minimumindex);
-            
-            System.out.println(minimum);
-            System.out.println(minimumindex);
-            
+            arrayListSorted.add(minimum);
+            arrayList.remove(minimumindex);
+
+            /*System.out.println(minimum);
+            System.out.println(minimumindex);*/
+
         }
 
 
-        for(int i = 0; i<= 9; i++){
+        for (int i = 0; i <= 9; i++) {
             System.out.println(arrayListSorted.get(i));
         }
     }
-
 
 
 }
