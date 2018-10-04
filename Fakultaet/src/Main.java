@@ -1,12 +1,16 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println(facRecursive(5));
-
-        System.out.println(isPalindromRecursive("anna"));
-        System.out.println(pascalTrinagleRecursive(10, 5));
+        //System.out.println(facRecursive(5));
+        //System.out.println(isPalindromRecursive("anna"));
+        //System.out.println(pascalTrinagleRecursive(10, 5));
         //System.out.println(pascalTriangle(10, 5));
-        System.out.println(fibonacci(5));
+        //System.out.println(fibonacci(5));
+        long starttime = System.nanoTime();
+        System.out.println(fac(10));
+        long elapsedtime = System.nanoTime() - starttime;
+        System.out.println(elapsedtime);
+
     }
 
     public static int fac(int n) {
@@ -22,6 +26,13 @@ public class Main {
         if (n == 1)
             return 1;
         return n * fac(n - 1);
+    }
+
+    public static int facEndRecursive(int n, int i){
+
+        if(n == 1)
+            return i;
+        return facEndRecursive(n-1, i*n);
     }
 
     public static boolean isPalindrom(String s) {
