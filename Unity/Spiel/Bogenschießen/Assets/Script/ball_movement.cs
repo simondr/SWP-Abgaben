@@ -10,7 +10,7 @@ public class ball_movement : MonoBehaviour {
 	void Start () {
 
         Ball.useGravity = true;
-        Ball.AddForce(0, 100, 200);
+        Ball.AddForce(0, 100, 200)
 	}
 	
 
