@@ -6,9 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        long stattime = System.nanoTime();
+        long stattime = System.currentTimeMillis();
         long elapsedtime = 0;
-        ArrayList<Integer> arrayList = getRandomList(10);
+        ArrayList<Integer> arrayList = getRandomList(1000000);
         ArrayList<Integer> arrayListSorted = new ArrayList<>();
 
         for (int i = 0; i <= arrayList.size()-1; i++) {
@@ -41,8 +41,8 @@ public class Main {
             System.out.println(arrayListSorted.get(i));
         }
 
-        elapsedtime = System.nanoTime() - stattime;
-        System.out.println("elapsed time: " + elapsedtime + " ns");
+        elapsedtime = System.currentTimeMillis() - stattime;
+        System.out.println("elapsed time: " + elapsedtime + " ms");
     }
 
     //returns arraylist filled with random integers

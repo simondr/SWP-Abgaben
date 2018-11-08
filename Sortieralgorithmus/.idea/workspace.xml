@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dbd31bd-f662-4673-8ad8-71f46063690e" name="Default" comment="Sortieralgorithmus working">
-      <change afterPath="$PROJECT_DIR$/../Bubblesort/out/production/Bubblesort/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bubblesort/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Bubblesort/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Bubblesort/out/production/Bubblesort/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Bubblesort/out/production/Bubblesort/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Shakersort/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Shakersort/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Sortieralgorithmus/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Sortieralgorithmus/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VariablentypenTest/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VariablentypenTest/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fizzbuzz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../fizzbuzz/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored mask="*.class" />
@@ -21,23 +26,23 @@
     <session id="1754960679">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.closed" value="13" />
+          <entry key="project.open.time.0" value="8" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1022" />
-          <entry key="txt" value="31" />
+          <entry key="java" value="1374" />
+          <entry key="txt" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1022" />
-          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="JAVA" value="1374" />
+          <entry key="PLAIN_TEXT" value="52" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.spring.boot.run.usages" />
@@ -53,8 +58,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+            <state relative-caret-position="108">
+              <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,7 +96,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,6 +112,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -212,6 +217,12 @@
       <workItem from="1537553327190" duration="1661000" />
       <workItem from="1537855532644" duration="145000" />
       <workItem from="1537856054391" duration="873000" />
+      <workItem from="1537857023726" duration="72000" />
+      <workItem from="1537857128125" duration="105000" />
+      <workItem from="1537863718457" duration="761000" />
+      <workItem from="1537864644043" duration="48000" />
+      <workItem from="1537865707883" duration="11000" />
+      <workItem from="1538056844056" duration="1088000" />
     </task>
     <task id="LOCAL-00001" summary="Sortieralgorithmus working">
       <created>1537856693509</created>
@@ -227,17 +238,31 @@
       <option name="project" value="LOCAL" />
       <updated>1537856902410</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Sortieralgorithmus working">
+      <created>1537857061291</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1537857061291</updated>
+    </task>
+    <task id="LOCAL-00004" summary="benchmarking added">
+      <created>1537864397291</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1537864397291</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8740000" />
+    <option name="totallyTimeSpent" value="10825000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2746781" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29756796" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -246,7 +271,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32839838" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32771084" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -254,7 +279,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32891566" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32839838" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32771084" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -278,14 +303,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Sortieralgorithmus working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sortieralgorithmus working" />
+    <MESSAGE value="benchmarking added" />
+    <option name="LAST_COMMIT_MESSAGE" value="benchmarking added" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/ArrayList.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        <state relative-caret-position="108">
+          <caret line="10" column="60" selection-start-line="10" selection-start-column="60" selection-end-line="10" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
