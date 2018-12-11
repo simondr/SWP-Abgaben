@@ -27,7 +27,7 @@ public class DoubleLinkedListTest {
     public void addBack() {
         DoubleLinkedList<Integer> dll = new DoubleLinkedList<Integer>();
         dll.addBack(2);
-        
+        //Assert.assertEquals(2, getElement(0));
     }
 
     @Test

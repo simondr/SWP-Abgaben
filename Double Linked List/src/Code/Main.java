@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-       /* DoubleLinkedList<String> dll = new DoubleLinkedList<String>();
+        DoubleLinkedList<String> dll = new DoubleLinkedList<String>();
         dll.addBack("asdf");
         System.out.println(dll);
         dll.addFront("35");
@@ -13,6 +13,8 @@ public class Main {
         System.out.println(dll);
         System.out.println(dll.getSize());
         dll.insert("$%&",0);
-        System.out.println(dll);*/
+        System.out.println(dll);
+        dll.delete(1);
+        System.out.println(dll);
     }
 }

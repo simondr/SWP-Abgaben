@@ -40,6 +40,7 @@ public class DoubleLinkedList<T> {
             head = node;
             tail = head;
             return;
+
         } else {
             Node oldhead = head;
             head = node;
@@ -129,19 +130,44 @@ public class DoubleLinkedList<T> {
 
     public void delete(int index) {
 
-        Node previous = head;
+        if (index == 0) {
 
-        if (index != 0) {
-            for (int i = 0; i < index - 1; i++) {
-                previous = previous.getNext();
-            }
+            head = head.getNext();
+            head.setPrevious(null);
+            return;
+        }
+        if (index == (getSize() - 1)) {
 
-            previous = previous.getNext().getNext();
-
-        } else {
+            tail = tail.getPrevious();
+            tail.setNext(null);
+            return;
 
         }
+
+        if (index >= getSize() / 2) {
+
+            Node tmp = tail;
+            for (int i = getSize()-1; i > index; i--) {
+                tmp = tmp.getPrevious();
+            }
+            tmp.getNext().setPrevious(tmp.getPrevious());
+            tmp.getPrevious().setNext(tmp.getNext());
+
+        }
+        else {
+
+            Node tmp = head;
+            for (int i = 0; i < index; i++) {
+                tmp = tmp.getNext();
+            }
+            tmp.getNext().setPrevious(tmp.getPrevious());
+            tmp.getPrevious().setNext(tmp.getNext());
+        }
+
+
+
     }
+
 
     @Override
     public String toString() {
