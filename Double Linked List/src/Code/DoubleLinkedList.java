@@ -68,7 +68,7 @@ public class DoubleLinkedList<T> {
 
         }
 
-        if (index == getSize()) {
+        if (index == getSize()-1) {
 
             Node oldtail = tail;
             tail = node;
@@ -76,7 +76,9 @@ public class DoubleLinkedList<T> {
             node.setPrevious(oldtail);
             return;
 
-        } else if (index >= (getSize() / 2)) {
+        }
+
+        if (index >= (getSize() / 2)) {
 
             for (int i = 0; i < index - 1; i++) {
                 previous = previous.getNext();
@@ -184,9 +186,9 @@ public class DoubleLinkedList<T> {
 
     public T pop(int index) {
 
-        T tmp = getElement(0);
+        T tmp = getElement(index);
         delete(index);
-        return getElement(index);
+        return tmp;
     }
 
     public void set(T value, int index) {
