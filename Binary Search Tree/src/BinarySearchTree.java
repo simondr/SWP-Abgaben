@@ -43,7 +43,7 @@ public class BinarySearchTree {
         }
     }
 
-    public Node search(int value){
+    public Node search(int value) throws NodeNotFoundException{
 
         Node tmp = head;
         while (value != tmp.getValue()){
@@ -62,7 +62,10 @@ public class BinarySearchTree {
             }
         }
 
-        return tmp;
+        if(tmp.getValue() == value)
+            return tmp;
+        else
+            throw new NodeNotFoundException();
     }
 
 }
