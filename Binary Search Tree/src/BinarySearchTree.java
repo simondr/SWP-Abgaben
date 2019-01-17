@@ -3,69 +3,210 @@ public class BinarySearchTree {
     private Node head = null;
 
 
-    public void add(int value){
+    public void add(int value) {
 
         Node node = new Node(value);
-        if(head == null) {
+
+        if (head == null) {
+
             head = node;
             return;
         }
 
-        if(value > head.getValue() && head.getLeft() == null){
-            head.setLeft(node);
-            return;
-        }
-        if(value < head.getValue() && head.getRight() == null){
+        if (value > head.getValue() && head.getRight() == null) {
             head.setRight(node);
             return;
         }
+        if (value < head.getValue() && head.getLeft() == null) {
+            head.setLeft(node);
+            return;
+        }
 
 
-        Node nextnode = head;
-        while (nextnode != null){
+        Node tmp = head;
 
-            if(nextnode.getValue() < value) {
-                if(nextnode.getLeft() == null) {
-                    nextnode.setLeft(node);
-                    return;
+        while (true) {
+
+
+            if (value < tmp.getValue()) {
+                if (tmp.getLeft() == null) {
+                    tmp.setLeft(node);
+                    break;
                 }
-                else
-                    nextnode = nextnode.getLeft();
+                tmp = tmp.getLeft();
             }
-            if(nextnode.getValue() > value){
-                if(nextnode.getRight() == null) {
-                    nextnode.setRight(node);
-                    return;
+
+            if (value > tmp.getValue()) {
+                if (tmp.getRight() == null) {
+                    tmp.setRight(node);
+                    break;
                 }
-                else
-                    nextnode = nextnode.getRight();
+                tmp = tmp.getRight();
             }
         }
     }
 
-    public Node search(int value) throws NodeNotFoundException{
+
+    public Node search(int value) throws NodeNotFoundException {
 
         Node tmp = head;
-        while (value != tmp.getValue()){
 
-            if(tmp.getValue() < value) {
-                if (tmp.getLeft() == null)
-                    break;
-                else
-                    tmp = tmp.getLeft();
+        while (true) {
+
+            if (tmp.getValue() == value)
+                return tmp;
+
+            if (value < tmp.getValue()){
+                if (tmp.getLeft() == null) {
+                    throw new NodeNotFoundException();
+                }
+                tmp = tmp.getLeft();
             }
-            if(tmp.getValue() > value) {
-                if (tmp.getRight() == null)
-                    break;
-                else
-                    tmp = tmp.getRight();
+
+            if (value > tmp.getValue()) {
+                if (tmp.getRight() == null) {
+                    throw new NodeNotFoundException();
+                }
+                tmp = tmp.getRight();
             }
         }
 
+    }
+
+
+    private Node searchPrevious(int value) throws NodeIsHeadException, NodeNotFoundException{
+
+        Node tmp = head;
+
         if(tmp.getValue() == value)
-            return tmp;
-        else
-            throw new NodeNotFoundException();
+            throw new NodeIsHeadException();
+
+        while (true){
+
+            if(tmp.getLeft() != null && tmp.getLeft().getValue() == value) {
+                return tmp;
+            }
+            if(tmp.getRight() != null && tmp.getRight().getValue() == value) {
+                return tmp;
+            }
+
+            if (value < tmp.getValue()) {
+                if (tmp.getLeft() == null)
+                    throw new NodeNotFoundException();
+
+                tmp = tmp.getLeft();
+            }
+
+            if(value > tmp.getValue()) {
+                if (tmp.getRight() == null)
+                    throw new NodeNotFoundException();
+
+                tmp = tmp.getRight();
+            }
+        }
+    }
+
+    private Node searchGreatestNode(int value){
+
+        Node startnode = null;
+        try {
+            startnode = search(value);
+        }
+        catch (NodeNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+
+        while (startnode.getRight() != null){
+
+            startnode = startnode.getRight();
+        }
+        return startnode;
+    }
+
+
+
+    public void delete(int value) {
+
+        Node deletenode = null;
+        try {
+            deletenode = search(value);
+        }
+        catch (NodeNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+
+        Node previousnode = null;
+        try {
+            previousnode = searchPrevious(value);
+        }
+        catch (NodeIsHeadException e){
+            System.out.println(e.getMessage());
+        }
+        catch (NodeNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+
+
+        //case: node is leaf
+        if (deletenode.getRight() == null && deletenode.getLeft() == null){
+
+            if(previousnode.getRight().getValue() == value)
+                previousnode.setRight(null);
+
+            if(previousnode.getLeft().getValue() == value)
+                previousnode.setLeft(null);
+
+            return;
+        }
+
+
+        //case linked list right
+        if(deletenode.getLeft() == null){
+            previousnode.setRight(deletenode.getRight());
+            return;
+        }
+        //case linked list left
+        if(deletenode.getRight() == null){
+            previousnode.setLeft(deletenode.getLeft());
+            return;
+        }
+
+
+        //worst case
+        Node greatestnode = searchGreatestNode(deletenode.getLeft().getValue());
+        Node predeletenode = null;
+        Node pregreatestnode = null;
+        try {
+            pregreatestnode = searchPrevious(greatestnode.getValue());
+        }
+        catch (NodeIsHeadException e){
+            System.out.println(e.getMessage());
+        }
+        catch (NodeNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            predeletenode = searchPrevious(deletenode.getValue());
+        }
+        catch (NodeIsHeadException e){
+            System.out.println(e.getMessage());
+        }
+        catch (NodeNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+
+
+        if(deletenode.getValue() > predeletenode.getValue())
+            predeletenode.setRight(greatestnode);
+
+        if(deletenode.getValue() < predeletenode.getValue())
+            predeletenode.setLeft(greatestnode);
+
+
+        System.out.println("grn.: " +greatestnode.getValue());
+        //delete();
+
     }
 
 }
