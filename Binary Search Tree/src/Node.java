@@ -5,26 +5,16 @@ public class Node {
     private Node right = null;
 
 
-
-
     //constructors
     public Node(int value) {
         this.value = value;
     }
 
 
-
-
-
-    //value get & set
-    public int getValue(){
+    //value get
+    public int getValue() {
         return value;
     }
-
-    public void setValue(int value){
-        this.value = value;
-    }
-
 
 
     //getter left/right

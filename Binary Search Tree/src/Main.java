@@ -72,11 +72,14 @@ public class Main {
         binarySearchTree.add(38);
         binarySearchTree.add(37);
         binarySearchTree.add(39);
+        binarySearchTree.add(6);
+        binarySearchTree.add(7);
+        binarySearchTree.add(4);
 
-        binarySearchTree.delete(40);
+        binarySearchTree.delete(30);
 
         try {
-            Node node = binarySearchTree.search(40);
+            Node node = binarySearchTree.searchFrom(binarySearchTree.search(40),36);
             System.out.println(node.getValue());
             System.out.println(node);
         }
@@ -84,14 +87,14 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-        try {
+        /*try {
             Node node = binarySearchTree.search(3);
             System.out.println(node.getValue());
             System.out.println(node);
         }
         catch (NodeNotFoundException e){
             System.out.println(e.getMessage());
-        }
+        }*/
 
     }
 }
