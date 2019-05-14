@@ -8,18 +8,25 @@ import static org.junit.Assert.*;
 
 public class CalculatorTest {
 
+    @Test(expected = InvalidFormatException.class)
+    public void invalidInput() throws InvalidFormatException{
+        Assert.assertEquals(11, Calculator.add("4 7", "|"));
+        Assert.assertEquals(1, Calculator.add("1"));
+
+    }
     @Test
     public void validInput() throws InvalidFormatException {
-        Assert.assertEquals(1, Calculator.add("4;7"));
+        Assert.assertEquals(11, Calculator.add("4|7","|"));
+        Assert.assertEquals(12, Calculator.add("4;7;1"));
     }
 
     @Test(expected = InvalidFormatException.class)
-    public void validDelimiter() throws InvalidFormatException {
+    public void invalidDelimiter() throws InvalidFormatException {
         Calculator.add("4 7");
     }
 
     @Test(expected = InvalidFormatException.class)
-    public void validNumber() throws InvalidFormatException {
+    public void invalidNumber() throws InvalidFormatException {
         Calculator.add("4;a");
     }
 
