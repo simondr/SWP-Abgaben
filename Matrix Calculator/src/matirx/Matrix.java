@@ -5,18 +5,18 @@ import exceptions.InvalidValuesException;
 
 public class Matrix {
 
-    int[][] values;
+    float[][] values;
 
 
     public Matrix(int rows, int columns) {
-        this.values = new int[rows][columns];
+        this.values = new float[rows][columns];
     }
 
     public Matrix(int rows, int columns, int... values) throws InvalidValuesException {
         if (values.length != rows * columns)
             throw new InvalidValuesException();
         int counter = 0;
-        this.values = new int[rows][columns];
+        this.values = new float[rows][columns];
         for (int i = 0; i <= rows - 1; i++) {
             for (int j = 0; j <= columns - 1; j++) {
                 this.values[i][j] = values[counter];
@@ -25,7 +25,7 @@ public class Matrix {
         }
     }
 
-    public Matrix(int[][] values) {
+    public Matrix(float[][] values) {
         this.values = values;
     }
 
@@ -37,11 +37,11 @@ public class Matrix {
         return values[0].length;
     }
 
-    public int[][] getValues() {
+    public float[][] getValues() {
         return values;
     }
 
-    public void setValues(int[][] values) {
+    public void setValues(float[][] values) {
         this.values = values;
     }
 
@@ -76,7 +76,7 @@ public class Matrix {
             throw new InvalidMatrixException();
 
 
-        int[][] values = new int[this.getRows()][matrix.getColumns()];
+        float[][] values = new float[this.getRows()][matrix.getColumns()];
 
         for (int i = 0; i < this.getRows(); i++) {
             for (int j = 0; j < matrix.getColumns(); j++) {

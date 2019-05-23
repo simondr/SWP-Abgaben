@@ -23,7 +23,7 @@ public class MatrixTest {
         Matrix m = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
         Assert.assertEquals(3, m.getColumns());
         Assert.assertEquals(2, m.getRows());
-        int[][] shouldbevalues = {{1, 2, 3}, {4, 5, 6}};
+        float[][] shouldbevalues = {{1, 2, 3}, {4, 5, 6}};
         Matrix shouldbe = new Matrix(2, 3);
         shouldbe.setValues(shouldbevalues);
         Assert.assertTrue(m.equals(shouldbe));
@@ -60,14 +60,14 @@ public class MatrixTest {
     @Test
     public void getElement() throws InvalidValuesException{
         Matrix a = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
-        Assert.assertEquals(2, a.getElement(0,1));
+        Assert.assertEquals(2, a.getElement(0,1),0);
     }
 
     @Test
     public void setElement() throws InvalidValuesException{
         Matrix a = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
         a.setElement(0,1,10000);
-        Assert.assertEquals(10000, a.getElement(0,1));
+        Assert.assertEquals(10000, a.getElement(0,1),0);
     }
 
 }
