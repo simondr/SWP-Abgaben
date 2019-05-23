@@ -20,11 +20,11 @@ public class MatrixTest {
     @Test
     public void initializeMatrixWithValues() throws InvalidValuesException {
 
-        Matrix m = new Matrix(3, 2, 1, 2, 3, 4, 5, 6);
+        Matrix m = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
         Assert.assertEquals(3, m.getColumns());
         Assert.assertEquals(2, m.getRows());
         int[][] shouldbevalues = {{1, 2, 3}, {4, 5, 6}};
-        Matrix shouldbe = new Matrix(3, 2);
+        Matrix shouldbe = new Matrix(2, 3);
         shouldbe.setValues(shouldbevalues);
         Assert.assertTrue(m.equals(shouldbe));
 
@@ -34,7 +34,7 @@ public class MatrixTest {
     public void multiplyMatrices() throws InvalidMatrixException, InvalidValuesException {
         Matrix a = new Matrix(2, 2, 1, 2, 3, 4);
         Matrix b = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
-        Matrix shouldbe = new Matrix(3, 2, 9, 12, 15, 19, 26, 33);
+        Matrix shouldbe = new Matrix(2, 3, 9, 12, 15, 19, 26, 33);
         a.multiplyWith(b);
         Assert.assertTrue(a.equals(shouldbe));
 
@@ -53,7 +53,7 @@ public class MatrixTest {
         Matrix a = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
         Matrix b = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
         a.add(b);
-        Matrix shouldbe = new Matrix(3, 2, 2, 4, 6, 8, 10, 12);
+        Matrix shouldbe = new Matrix(2, 3, 2, 4, 6, 8, 10, 12);
         Assert.assertTrue(a.equals(shouldbe));
     }
 
