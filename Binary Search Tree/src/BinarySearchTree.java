@@ -206,4 +206,28 @@ public class BinarySearchTree {
 
     }
 
+
+    public int getDepth(){
+        if(this.head == null)
+            return 0;
+
+        return getDepth(this.head, 1);
+    }
+
+    private int getDepth(Node n, int actDepth){
+        if(n.getRight() == null && n.getLeft() == null)
+            return actDepth;
+
+        int rightdepth = 0;
+        int leftdepth = 0;
+
+        if(n.getLeft()!= null)
+            leftdepth = getDepth(n.getLeft(), actDepth +1);
+
+        if(n.getRight() != null)
+            rightdepth = getDepth(n.getRight(), actDepth +1);
+
+        return Math.max(rightdepth, leftdepth);
+    }
+
 }
