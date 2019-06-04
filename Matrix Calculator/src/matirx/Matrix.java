@@ -5,18 +5,18 @@ import exceptions.InvalidValuesException;
 
 public class Matrix {
 
-    float[][] values;
+    double[][] values;
 
 
     public Matrix(int rows, int columns) {
-        this.values = new float[rows][columns];
+        this.values = new double[rows][columns];
     }
 
     public Matrix(int rows, int columns, int... values) throws InvalidValuesException {
         if (values.length != rows * columns)
             throw new InvalidValuesException();
         int counter = 0;
-        this.values = new float[rows][columns];
+        this.values = new double[rows][columns];
         for (int i = 0; i <= rows - 1; i++) {
             for (int j = 0; j <= columns - 1; j++) {
                 this.values[i][j] = values[counter];
@@ -25,7 +25,7 @@ public class Matrix {
         }
     }
 
-    public Matrix(float[][] values) {
+    public Matrix(double[][] values) {
         this.values = values;
     }
 
@@ -37,11 +37,11 @@ public class Matrix {
         return values[0].length;
     }
 
-    public float[][] getValues() {
+    public double[][] getValues() {
         return values;
     }
 
-    public void setValues(float[][] values) {
+    public void setValues(double[][] values) {
         this.values = values;
     }
 
@@ -76,7 +76,7 @@ public class Matrix {
             throw new InvalidMatrixException();
 
 
-        float[][] values = new float[this.getRows()][matrix.getColumns()];
+        double[][] values = new double[this.getRows()][matrix.getColumns()];
 
         for (int i = 0; i < this.getRows(); i++) {
             for (int j = 0; j < matrix.getColumns(); j++) {
@@ -118,13 +118,17 @@ public class Matrix {
         return this;
     }
 
-    public float getElement(int row, int column) {
+    public double getElement(int row, int column) {
         return this.values[row][column];
     }
 
     public void setElement(int row, int column, int value) {
         this.values[row][column] = value;
 
+    }
+
+    public double sigmoid(double input){
+        return 1/(Math.exp(-input) +1);
     }
 
 }

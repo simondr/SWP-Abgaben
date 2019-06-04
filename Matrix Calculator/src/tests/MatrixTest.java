@@ -24,25 +24,23 @@ public class MatrixTest {
         Matrix m = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
         Assert.assertEquals(3, m.getColumns());
         Assert.assertEquals(2, m.getRows());
-        float[][] shouldbevalues = {{1, 2, 3}, {4, 5, 6}};
+        double[][] shouldbevalues = {{1, 2, 3}, {4, 5, 6}};
         Matrix shouldbe = new Matrix(2, 3);
         shouldbe.setValues(shouldbevalues);
         Assert.assertTrue(m.equals(shouldbe));
     }
 
     @Test
-    public void getValues() throws InvalidValuesException {
-        float[][] values = {{1, 2, 3}, {4, 5, 6}};
+    public void getValues() {
+        double[][] values = {{1, 2, 3}, {4, 5, 6}};
         Matrix m = new Matrix(values);
         Assert.assertEquals(values, m.getValues());
-
-
     }
 
     @Test
     public void initializeMatrixWithArray() throws InvalidValuesException {
 
-        float[][] values = {{1, 2, 3}, {4, 5, 6}};
+        double[][] values = {{1, 2, 3}, {4, 5, 6}};
         Matrix shouldbe = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
         Matrix m = new Matrix(values);
         Assert.assertTrue(m.equals(shouldbe));
@@ -123,5 +121,12 @@ public class MatrixTest {
         Matrix a = new Matrix(2, 3, 1, 2, 3, 4, 5, 6);
         Matrix b = new Matrix(2, 2, 1, 2, 3, 4);
         a.add(b); }
+
+    @Test
+    public void sigmoid() throws InvalidValuesException{
+        Matrix a = new Matrix(2, 2, 0, 1, 2, 3);
+        Assert.assertEquals(0.5, a.sigmoid(a.getElement(0,0)), 0);
+    }
+
 
 }
