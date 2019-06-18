@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notenerfassung</title>
+</head>
+<body>
+
+{% block content %}
+   <form method="POST">
+       {% csrf_token %}
+       {{ form.as_p }}
+
+       <button class="btn" style="background-color:yellow; color:blue" type = "submit">login</button>
+   </form>
+
+   If you don't have an account ask the administrator.
+{% endblock %}
+
+</body>
+</html>
