@@ -34,7 +34,7 @@ public class MatrixTest {
     public void getValues() {
         double[][] values = {{1, 2, 3}, {4, 5, 6}};
         Matrix m = new Matrix(values);
-        Assert.assertEquals(values, m.getValues());
+        Assert.assertArrayEquals(values, m.getValues());
     }
 
     @Test
